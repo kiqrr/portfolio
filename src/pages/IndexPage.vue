@@ -84,7 +84,13 @@
         </div>
 
         <div class="avatar-container">
-          <q-img src="src/assets/profilepic.png" class="avatar" width="300px" height="300px" />
+          <q-img
+            src="src/assets/profilepic.png"
+            class="avatar"
+            width="300px"
+            height="300px"
+            @click="randomFilter()"
+          />
         </div>
       </div>
       <q-separator id="separador" />
@@ -314,6 +320,23 @@ const $q = useQuasar()
 $q.dark.set(true)
 function toggleDarkMode() {
   $q.dark.toggle()
+}
+
+function randomFilter() {
+  const filters = [
+    'none',
+    'grayscale',
+    'sepia',
+    'saturate',
+    'hue-rotate',
+    'invert',
+    'opacity',
+    'brightness',
+    'contrast',
+    'blur',
+  ]
+  const randomFilter = filters[Math.floor(Math.random() * filters.length)]
+  document.querySelector('.avatar').style.filter = `${randomFilter}(${Math.random() * 200}%)`
 }
 </script>
 
