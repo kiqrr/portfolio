@@ -252,7 +252,11 @@
       <div>
         <q-footer class="cabecalho q-py-md">
           <q-toolbar>
-            <q-toolbar-title>© 2025 Caique Rodrigues</q-toolbar-title>
+            <q-toolbar-title style="font-size: smaller">© 2025 Caique Rodrigues</q-toolbar-title>
+            <span style="font-size: smaller"
+              >Feito com <a class="anchor" href="https://vuejs.org/">Vue.JS</a> e
+              <a class="anchor" href="https://quasar.dev/">Quasar.dev</a></span
+            >
           </q-toolbar>
         </q-footer>
       </div>
@@ -276,6 +280,7 @@ function toggleDarkMode() {
 .cabecalho {
   background-color: rgba(255, 255, 255, 0);
   margin-inline: 20%;
+  position: absolute;
 }
 
 /* Controle do grid em modo claro/escuro */
@@ -466,5 +471,10 @@ function toggleDarkMode() {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.anchor {
+  color: #00ff62;
+  text-decoration: none;
 }
 </style>
