@@ -90,11 +90,11 @@
       <q-separator id="separador" />
 
       <div class="habilidades margin q-py-xl" id="habilidades">
-        <h2 class="text-h4 q-mb-lg">HABILIDADES</h2>
-
+        <span class="text-h4 q-mb-lg text-grey-4">Habilidades</span
+        ><span class="text-h6 q-mb-lg text-grey-4"> / Skills</span>
         <!-- Backend Section -->
         <div class="categoria q-mb-xl">
-          <h3 class="text-h6 q-mb-md">Backend</h3>
+          <h3 class="text-h6 q-mb-md text-grey-4">Backend</h3>
           <div class="skills-grid">
             <q-card flat bordered class="skill-card">
               <q-card-section class="flex items-center">
@@ -156,7 +156,7 @@
 
         <!-- Frontend Section -->
         <div class="categoria q-mb-xl">
-          <h3 class="text-h6 q-mb-md">Frontend</h3>
+          <h3 class="text-h6 q-mb-md text-grey-4">Frontend</h3>
           <div class="skills-grid">
             <q-card flat bordered class="skill-card">
               <q-card-section class="flex items-center">
@@ -216,7 +216,10 @@
         </div>
         <!-- Frontend Section -->
         <div class="categoria q-mb-xl">
-          <h3 class="text-h6 q-mb-md">Outros</h3>
+          <div class="q-mb-md">
+            <span class="text-h6 q-mb-md text-grey-4">Outros</span>
+            <span class="text-subtitle q-mb-md text-grey-4"> / Others</span>
+          </div>
           <div class="skills-grid">
             <q-card flat bordered class="skill-card">
               <q-card-section class="flex items-center">
