@@ -8,7 +8,7 @@
             <q-btn class="custom-btn" flat label="Inicio" href="#inicio" />
             <q-btn class="custom-btn" flat label="Sobre" href="#sobre" />
             <q-btn class="custom-btn" flat label="Habilidades" href="#habilidades" />
-            <q-icon name="light_mode" @click="toggleDarkMode" size="1.4rem" />
+            <q-icon class="q-ml-sm" name="light_mode" @click="toggleDarkMode" size="1.4rem" />
           </div>
         </q-toolbar>
       </q-header>
@@ -16,9 +16,9 @@
       <q-separator id="separador" />
 
       <div class="content-wrapper margin" id="inicio">
-        <span class="text-subtitle1 text-green" id="gradient">Desenvolvedor Full Stack</span>
-        <h1 class="text-bold">Caique Rodrigues.</h1>
-        <p class="text-h4 text-grey-8">
+        <span style="font-size: 1.4rem" id="gradient">Desenvolvedor Full Stack</span>
+        <h1 class="text-bold responsive">Caique Rodrigues.</h1>
+        <p class="text-grey-8 frase">
           Criando e otimizando código de alto desempenho, com foco em metodologias ágeis.
         </p>
       </div>
@@ -304,7 +304,7 @@ function toggleDarkMode() {
 
 /* Modo escuro */
 .body--dark .grid-background:before {
-  opacity: 0.2;
+  opacity: 0.25;
 }
 
 /* Controle das cores dos botões */
@@ -341,12 +341,6 @@ function toggleDarkMode() {
 .nav-buttons {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-
-.text-subtitle1 {
-  margin: 0;
-  line-height: 1.5;
 }
 
 /* Ajuste responsivo */
@@ -425,12 +419,27 @@ function toggleDarkMode() {
 @media (max-width: 768px) {
   .apresentacao {
     flex-direction: column-reverse;
-    text-align: center;
   }
 
   .avatar-container {
-    width: 200px;
+    width: auto;
     margin: 0 auto;
+  }
+
+  .responsive {
+    font-size: 3.3rem;
+    line-height: 100%;
+  }
+
+  .frase {
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+
+  .custom-btn {
+    font-size: 0.8rem;
+    margin-inline: -0.2rem;
+    padding: 0.7rem;
   }
 }
 </style>
@@ -476,5 +485,9 @@ function toggleDarkMode() {
 .anchor {
   color: #00ff62;
   text-decoration: none;
+}
+
+.frase {
+  font-size: 1.8rem;
 }
 </style>
