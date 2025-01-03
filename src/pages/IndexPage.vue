@@ -5,9 +5,9 @@
         <q-toolbar>
           <q-toolbar-title>{KIQ}</q-toolbar-title>
           <div class="nav-buttons">
-            <q-btn class="custom-btn" flat label="Inicio" href="#inicio" />
-            <q-btn class="custom-btn" flat label="Sobre" href="#sobre" />
-            <q-btn class="custom-btn" flat label="Habilidades" href="#habilidades" />
+            <q-btn class="custom-btn" no-caps flat label="Inicio" href="#inicio" />
+            <q-btn class="custom-btn" no-caps flat label="Sobre" href="#sobre" />
+            <q-btn class="custom-btn" no-caps flat label="Habilidades" href="#habilidades" />
             <q-icon class="q-ml-sm" name="light_mode" @click="toggleDarkMode" size="1.4rem" />
           </div>
         </q-toolbar>
@@ -21,6 +21,34 @@
         <p class="text-grey-8 frase">
           Criando e otimizando código de alto desempenho, com foco em metodologias ágeis.
         </p>
+        <div>
+          <div class="q-my-md">
+            <q-btn no-caps flat target="_blank" href="https://www.linkedin.com/in/caiquerr/">
+              <q-img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                width="24px"
+                style="margin-right: 8px"
+              />
+              <span>LinkedIn</span>
+            </q-btn>
+            <q-btn no-caps flat target="_blank" href="https://github.com/kiqrr">
+              <q-img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                width="24px"
+                style="margin-right: 8px"
+              />
+              <span>Github</span>
+            </q-btn>
+            <q-btn
+              flat
+              no-caps
+              target="_blank"
+              href="mailto:caiquerr99@gmail.com"
+              icon="mail"
+              label="Email"
+            />
+          </div>
+        </div>
       </div>
 
       <q-separator id="separador" />
