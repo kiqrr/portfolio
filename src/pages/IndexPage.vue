@@ -5,10 +5,21 @@
         <q-toolbar>
           <q-toolbar-title>{KIQ}</q-toolbar-title>
           <div class="nav-buttons">
-            <q-btn class="custom-btn" no-caps flat label="Inicio" href="#inicio" />
-            <q-btn class="custom-btn" no-caps flat label="Sobre" href="#sobre" />
-            <q-btn class="custom-btn" no-caps flat label="Habilidades" href="#habilidades" />
+            <q-btn class="custom-btn" no-caps flat :label="$t('inicio')" href="#inicio" />
+            <q-btn class="custom-btn" no-caps flat :label="$t('sobre')" href="#sobre" />
+            <q-btn class="custom-btn" no-caps flat :label="$t('habilidades')" href="#habilidades" />
             <q-icon class="q-ml-sm" name="light_mode" @click="toggleDarkMode" size="1.4rem" />
+            <q-select
+              v-model="locale"
+              :options="localeOptions"
+              :label="$t('idioma')"
+              dense
+              borderless
+              emit-value
+              map-options
+              options-dense
+              style="min-width: 100px"
+            />
           </div>
         </q-toolbar>
       </q-header>
@@ -16,10 +27,10 @@
       <q-separator id="separador" />
 
       <div class="content-wrapper margin" id="inicio">
-        <span style="font-size: 1.4rem" id="gradient">Desenvolvedor Full Stack</span>
+        <span style="font-size: 1.4rem" id="gradient">{{ $t('ocupation') }}</span>
         <h1 class="text-bold responsive">Caique Rodrigues.</h1>
         <p class="text-grey-8 frase">
-          Criando e otimizando código de alto desempenho, com foco em metodologias ágeis.
+          {{ $t('frase') }}
         </p>
         <div>
           <div class="q-my-md">
@@ -54,32 +65,16 @@
       <q-separator id="separador" />
       <div class="apresentacao margin q-mt-xl" id="sobre">
         <div class="texto-apresentacao">
-          <div class="saudacao">Olá <span class="waving-hand">👋</span></div>
+          <div class="saudacao">{{ $t('hello') }}<span class="waving-hand">👋</span></div>
 
-          <p class="descricao q-mt-md">Meu nome é Caique Rodrigues, tenho 25 anos. 🇧🇷</p>
-
-          <p class="experiencia q-mt-md">
-            Atualmente estou cursando Desenvolvimento de Sistemas no Senai.
-          </p>
+          <p class="descricao q-mt-md">{{ $t('myName') }}</p>
 
           <p class="experiencia q-mt-md">
-            Sou apaixonado por tecnologia desde criança e atualmente tenho me dedicado a me tornar
-            um programador cada vez mais experiente e capacitado para atender as demandas do mercado
-            com maestria, para isso estou sempre me atualizando fazendo cursos de programação e
-            pesquisando assuntos relacionadas a tecnologia em paralelo.
+            {{ $t('studying') }}
           </p>
 
-          <p class="chamada q-mt-xl text-grey-6">My name is Caique Rodrigues, I'm 25 years old.</p>
-
-          <p class="chamada q-mt-md text-grey-6">
-            I'm currently studying Systems Development at Senai São Paulo.
-          </p>
-
-          <p class="chamada q-mt-md text-grey-6">
-            I have been passionate about technology since I was a child and currently I have
-            dedicated myself to becoming an increasingly programmer experienced and qualified to
-            meet market demands with mastery, so I am always updating myself taking programming
-            courses and researching technology-related subjects in parallel.
+          <p class="experiencia q-mt-md">
+            {{ $t('aboutMe') }}
           </p>
         </div>
 
@@ -89,6 +84,7 @@
             class="avatar"
             width="300px"
             height="300px"
+            style="filter: contrast(131.65%)"
             @click="randomFilter()"
           />
         </div>
@@ -108,8 +104,7 @@
       <q-separator id="separador" />
 
       <div class="habilidades margin q-py-xl" id="habilidades">
-        <span class="text-h4 q-mb-lg">Habilidades</span
-        ><span class="text-h6 q-mb-lg"> / Skills</span>
+        <span class="text-h4 q-mb-lg">{{ $t('habilidades') }}</span>
         <!-- Backend Section -->
         <div class="categoria q-mb-xl">
           <h3 class="text-h6 q-mb-md">Backend</h3>
@@ -235,8 +230,7 @@
         <!-- Frontend Section -->
         <div class="categoria q-mb-xl">
           <div class="q-mb-md">
-            <span class="text-h6 q-mb-md">Outros</span>
-            <span class="text-subtitle q-mb-md"> / Others</span>
+            <span class="text-h6 q-mb-md">{{ $t('other') }}</span>
           </div>
           <div class="skills-grid">
             <q-card flat bordered class="skill-card">
@@ -303,7 +297,7 @@
           <q-toolbar>
             <q-toolbar-title style="font-size: smaller">© 2025 Caique Rodrigues</q-toolbar-title>
             <span style="font-size: smaller"
-              >Feito com <a class="anchor" href="https://vuejs.org/">Vue.JS</a> e
+              >{{ $t('madeWith') }}<a class="anchor" href="https://vuejs.org/">Vue.JS</a> &
               <a class="anchor" href="https://quasar.dev/">Quasar.dev</a></span
             >
           </q-toolbar>
@@ -315,6 +309,8 @@
 
 <script setup>
 import { useQuasar } from 'quasar'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n({ useScope: 'global' })
 
 const $q = useQuasar()
 $q.dark.set(true)
@@ -338,6 +334,11 @@ function randomFilter() {
   const randomFilter = filters[Math.floor(Math.random() * filters.length)]
   document.querySelector('.avatar').style.filter = `${randomFilter}(${Math.random() * 200}%)`
 }
+
+const localeOptions = [
+  { value: 'en-US', label: 'English' },
+  { value: 'pt-BR', label: 'Português - Brasil' },
+]
 </script>
 
 <style>
