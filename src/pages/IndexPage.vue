@@ -4,7 +4,7 @@
       <q-header class="cabecalho q-py-md">
         <q-toolbar>
           <q-toolbar-title>{KIQ}</q-toolbar-title>
-          <div class="nav-buttons">
+          <div class="nav-buttons gt-sm">
             <q-btn class="custom-btn" no-caps flat :label="$t('inicio')" href="#inicio" />
             <q-btn class="custom-btn" no-caps flat :label="$t('sobre')" href="#sobre" />
             <q-btn class="custom-btn" no-caps flat :label="$t('habilidades')" href="#habilidades" />
@@ -12,15 +12,57 @@
             <q-select
               v-model="locale"
               :options="localeOptions"
-              :label="$t('idioma')"
               dense
               borderless
               emit-value
               map-options
               options-dense
               style="min-width: 100px"
+              class="q-ml-md"
             />
           </div>
+          <!-- Menu hamburguer visível apenas em mobile -->
+          <q-btn flat dense round icon="menu" class="lt-md" @click="toggleMenu">
+            <q-menu>
+              <q-list style="min-width: 200px">
+                <q-item clickable v-close-popup href="#inicio">
+                  <q-item-section>{{ $t('inicio') }}</q-item-section>
+                </q-item>
+
+                <q-item clickable v-close-popup href="#sobre">
+                  <q-item-section>{{ $t('sobre') }}</q-item-section>
+                </q-item>
+
+                <q-item clickable v-close-popup href="#habilidades">
+                  <q-item-section>{{ $t('habilidades') }}</q-item-section>
+                </q-item>
+
+                <q-separator />
+
+                <q-item>
+                  <q-item-section>
+                    <q-icon name="light_mode" @click="toggleDarkMode" />
+                  </q-item-section>
+                </q-item>
+
+                <q-item>
+                  <q-item-section>
+                    <q-select
+                      v-model="locale"
+                      :options="localeOptions"
+                      dense
+                      borderless
+                      emit-value
+                      map-options
+                      options-dense
+                      style="min-width: 100px"
+                      id="mobileLanguage"
+                    />
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
         </q-toolbar>
       </q-header>
 
@@ -337,7 +379,7 @@ function randomFilter() {
 
 const localeOptions = [
   { value: 'en-US', label: 'English' },
-  { value: 'pt-BR', label: 'Português - Brasil' },
+  { value: 'pt-BR', label: 'Português' },
 ]
 </script>
 
@@ -417,6 +459,28 @@ const localeOptions = [
   .cabecalho {
     margin-inline: 5%;
   }
+}
+
+@media (max-width: 1023px) {
+  .gt-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lt-md {
+    display: none;
+  }
+}
+
+.q-menu {
+  background: var(--q-dark);
+  color: #fff !important;
+}
+
+/* Força o texto do menu a permanecer branco em ambos os modos */
+.q-menu .q-item #mobileLanguage {
+  color: #fff !important;
 }
 
 #separador {
