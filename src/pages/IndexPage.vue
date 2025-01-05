@@ -122,7 +122,7 @@
 
         <div class="avatar-container">
           <q-img
-            src="src/assets/profilepic.png"
+            src="/portfolio/assets/profilepic.png"
             class="avatar"
             width="300px"
             height="300px"
@@ -395,7 +395,7 @@ const localeOptions = [
 
 /* Controle do grid em modo claro/escuro */
 .grid-background:before {
-  background-image: url(src/assets/grid.svg);
+  background-image: url(/portfolio/assets/grid.svg);
   background-repeat: repeat;
   content: '';
   height: 100%;
