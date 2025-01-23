@@ -425,6 +425,30 @@ const localeOptions = [
 </script>
 
 <style>
+/* Estilo para navegadores WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00bd00;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00bd00;
+}
+
+/* Estilo para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00bd00 #00000000;
+}
+
 .margin {
   margin-inline: 20%;
 }
