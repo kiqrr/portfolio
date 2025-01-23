@@ -1,5 +1,8 @@
 <template>
-  <q-layout view="lHh Lpr lFf" class="grid-background">
+  <q-layout view="lHh Lpr lFf">
+    <div id="container">
+      <canvas id="canvas"></canvas>
+    </div>
     <q-page-container>
       <q-header class="cabecalho q-py-md">
         <q-toolbar>
@@ -127,7 +130,6 @@
             width="300px"
             height="300px"
             style="filter: contrast(131.65%)"
-            @click="randomFilter()"
           />
         </div>
       </div>
@@ -360,22 +362,60 @@ function toggleDarkMode() {
   $q.dark.toggle()
 }
 
-function randomFilter() {
-  const filters = [
-    'none',
-    'grayscale',
-    'sepia',
-    'saturate',
-    'hue-rotate',
-    'invert',
-    'opacity',
-    'brightness',
-    'contrast',
-    'blur',
-  ]
-  const randomFilter = filters[Math.floor(Math.random() * filters.length)]
-  document.querySelector('.avatar').style.filter = `${randomFilter}(${Math.random() * 200}%)`
-}
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const canvas = document.getElementById('canvas')
+  const ctx = canvas.getContext('2d')
+
+  // Configuração inicial do canvas
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+
+  // Configuração das letras
+  const letters =
+    'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ'
+  const letterArray = letters.split('')
+
+  // Configuração das colunas
+  const fontSize = 10
+  const columns = canvas.width / fontSize
+
+  // Configuração das gotas
+  const drops = new Array(Math.floor(columns)).fill(1)
+
+  // Função de desenho
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, .1)'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+    ctx.font = fontSize + 'px monospace'
+    ctx.fillStyle = '#0f0'
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = letterArray[Math.floor(Math.random() * letterArray.length)]
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize)
+      drops[i]++
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+        drops[i] = 0
+      }
+    }
+  }
+
+  // Ajuste do canvas para redimensionamento
+  function updateDimensions() {
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    drops.length = Math.floor(canvas.width / fontSize)
+    drops.fill(1)
+  }
+
+  window.addEventListener('resize', updateDimensions)
+
+  // Iniciar animação
+  setInterval(draw, 33)
+})
 
 const localeOptions = [
   { value: 'en-US', label: 'English' },
@@ -393,28 +433,13 @@ const localeOptions = [
   position: absolute;
 }
 
-/* Controle do grid em modo claro/escuro */
-.grid-background:before {
-  background-image: url(/portfolio/assets/grid.svg);
-  background-repeat: repeat;
-  content: '';
-  height: 100%;
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: -1;
-}
-
-/* Modo claro */
-.body--light .grid-background:before {
-  opacity: 0.4;
-  filter: invert(100%);
-}
-
-/* Modo escuro */
-.body--dark .grid-background:before {
-  opacity: 0.25;
+  width: 100%;
+  height: 100%;
 }
 
 /* Controle das cores dos botões */
