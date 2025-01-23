@@ -360,6 +360,7 @@ const $q = useQuasar()
 $q.dark.set(true)
 function toggleDarkMode() {
   $q.dark.toggle()
+  document.body.style.backgroundColor = $q.dark.isActive ? '#000000' : '#ffffff'
 }
 
 import { onMounted } from 'vue'
@@ -386,7 +387,7 @@ onMounted(() => {
 
   // Função de desenho
   function draw() {
-    ctx.fillStyle = 'rgba(0, 0, 0, .1)'
+    ctx.fillStyle = $q.dark.isActive ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     ctx.font = fontSize + 'px monospace'
