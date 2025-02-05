@@ -17,4 +17,6 @@ export default {
             um programador cada vez mais experiente e capacitado para atender as demandas do mercado
             com maestria, para isso estou sempre me atualizando fazendo cursos de programação e
             pesquisando assuntos relacionadas a tecnologia em paralelo.`,
+  certificados: 'Certificados',
+  projetos: 'Projetos',
 }

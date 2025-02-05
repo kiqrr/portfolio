@@ -17,4 +17,6 @@ export default {
             dedicated myself to becoming an increasingly programmer experienced and qualified to
             meet market demands with mastery, so I am always updating myself taking programming
             courses and researching technology-related subjects in parallel.`,
+  certificados: 'Certificates',
+  projetos: 'Projects',
 }

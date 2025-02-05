@@ -11,6 +11,14 @@
             <q-btn class="custom-btn" no-caps flat :label="$t('inicio')" href="#inicio" />
             <q-btn class="custom-btn" no-caps flat :label="$t('sobre')" href="#sobre" />
             <q-btn class="custom-btn" no-caps flat :label="$t('habilidades')" href="#habilidades" />
+            <q-btn
+              class="custom-btn"
+              no-caps
+              flat
+              :label="$t('certificados')"
+              href="#certificados"
+            />
+            <q-btn class="custom-btn" no-caps flat :label="$t('projetos')" href="#projetos" />
             <q-icon class="q-ml-sm" name="light_mode" @click="toggleDarkMode" size="1.4rem" />
             <q-select
               v-model="locale"
@@ -103,6 +111,19 @@
               icon="mail"
               label="Email"
             />
+            <q-btn
+              no-caps
+              flat
+              target="_blank"
+              href="https://www.credly.com/users/caique-rodrigues.aa2822e2"
+            >
+              <q-img
+                src="https://www.svgrepo.com/show/331358/credly.svg"
+                width="24px"
+                style="margin-right: 8px"
+              />
+              <span>Credly</span>
+            </q-btn>
           </div>
         </div>
       </div>
@@ -336,6 +357,228 @@
         </div>
       </div>
       <q-separator id="separador" />
+
+      <div class="certificados margin q-py-xl" id="certificados">
+        <span class="text-h4 q-mb-lg">Certificados</span>
+        <div class="certificates-grid q-mt-md">
+          <!-- Cisco - English for IT 1 -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/english_for_it_1.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">English for IT 1</div>
+              <div class="text-subtitle2">Cisco</div>
+              <div class="text-caption">Dezembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- Senai - Fundamentos do Python -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/fundamentos_do_python_1.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">Fundamentos do Python 1</div>
+              <div class="text-subtitle2">Senai São Paulo</div>
+              <div class="text-caption">Dezembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: Python, Raciocínio lógico, Organização
+              </div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- Cisco - JavaScript Essentials 1 -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/javascript_essentials_1.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">JavaScript Essentials 1</div>
+              <div class="text-subtitle2">Cisco</div>
+              <div class="text-caption">Dezembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- Cisco - JavaScript Essentials 2 -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/javascript_essentials_2.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">JavaScript Essentials 2</div>
+              <div class="text-subtitle2">Cisco</div>
+              <div class="text-caption">Dezembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- Codecademy - Learn Python 3 -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/learn_python_3_course.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">Learn Python 3 Course</div>
+              <div class="text-subtitle2">Codecademy</div>
+              <div class="text-caption">Dezembro 2024</div>
+              <div class="text-caption q-mt-sm">Competências: Python</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- IBM - Web Development -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/web_development_fundamentals.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">Web Development Fundamentals</div>
+              <div class="text-subtitle2">IBM</div>
+              <div class="text-caption">Dezembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- Google Cloud -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/google_cloud_computing_foundations_certificate.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">Google Cloud Computing Foundations</div>
+              <div class="text-subtitle2">Google</div>
+              <div class="text-caption">Novembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- SENAI - Excel -->
+          <q-card flat bordered class="certificate-card">
+            <q-img src="src/assets/excel_basico.jfif" height="200px" class="certificate-image" />
+            <q-card-section>
+              <div class="text-h6">Excel Básico</div>
+              <div class="text-subtitle2">SENAI Morvan Figueiredo</div>
+              <div class="text-caption">Setembro 2024</div>
+              <div class="text-caption q-mt-sm">Competências: Microsoft Excel</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- Cisco - IT Essentials -->
+          <q-card flat bordered class="certificate-card">
+            <q-img src="src/assets/it_essentials.jfif" height="200px" class="certificate-image" />
+            <q-card-section>
+              <div class="text-h6">IT Essentials</div>
+              <div class="text-subtitle2">Cisco</div>
+              <div class="text-caption">Setembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- Cisco - IoT -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/introduction_to_iot.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">Introduction to IoT</div>
+              <div class="text-subtitle2">Cisco</div>
+              <div class="text-caption">Setembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- SENAI - Segurança do Trabalho -->
+          <q-card flat bordered class="certificate-card">
+            <q-img
+              src="src/assets/seguranca_do_trabalho.jfif"
+              height="200px"
+              class="certificate-image"
+            />
+            <q-card-section>
+              <div class="text-h6">Segurança do Trabalho</div>
+              <div class="text-subtitle2">SENAI Morvan Figueiredo</div>
+              <div class="text-caption">Setembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+
+          <!-- SENAI - Ética na IA -->
+          <q-card flat bordered class="certificate-card">
+            <q-img src="src/assets/etica_na_ia.jfif" height="200px" class="certificate-image" />
+            <q-card-section>
+              <div class="text-h6">Ética na IA</div>
+              <div class="text-subtitle2">SENAI Morvan Figueiredo</div>
+              <div class="text-caption">Setembro 2024</div>
+            </q-card-section>
+            <q-card-actions>
+              <q-btn flat label="Ver Certificado" />
+            </q-card-actions>
+          </q-card>
+        </div>
+      </div>
+
+      <q-separator id="separador" />
+
+      <div class="projetos margin q-py-xl" id="projetos">
+        <span class="text-h4 q-mb-lg">Projetos</span>
+        <div class="projects-grid q-mt-md">
+          <q-card flat bordered class="project-card">
+            <q-img src="caminho-para-imagem" />
+            <q-card-section>
+              <div class="text-h6">Nome do Projeto</div>
+              <p class="text-body2">Descrição do projeto</p>
+            </q-card-section>
+            <q-card-actions align="right">
+              <q-btn flat label="Demo" />
+              <q-btn flat label="Código" />
+            </q-card-actions>
+          </q-card>
+        </div>
+      </div>
+      <q-separator id="separador" />
       <div>
         <q-footer class="cabecalho q-py-md">
           <q-toolbar>
@@ -423,6 +666,58 @@ const localeOptions = [
   { value: 'pt-BR', label: 'Português' },
 ]
 </script>
+
+<style scoped>
+.text-caption {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.certificate-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.q-card-section {
+  flex-grow: 1;
+}
+</style>
+
+<style scoped>
+.certificates-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.certificate-card,
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.certificate-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .certificates-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
 <style>
 /* Estilo para navegadores WebKit (Chrome, Safari, Edge) */
