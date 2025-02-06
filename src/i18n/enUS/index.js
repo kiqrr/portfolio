@@ -19,4 +19,6 @@ export default {
             courses and researching technology-related subjects in parallel.`,
   certificados: 'Certificates',
   projetos: 'Projects',
+  see_certificate: 'See More',
+  verify: 'Verify',
 }

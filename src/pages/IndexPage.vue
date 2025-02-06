@@ -359,7 +359,7 @@
       <q-separator id="separador" />
 
       <div class="certificados margin q-py-xl" id="certificados">
-        <span class="text-h4 q-mb-lg">Certificados</span>
+        <span class="text-h4 q-mb-lg">{{ $t('certificados') }}</span>
         <div class="certificates-grid q-mt-md">
           <!-- Cisco - English for IT 1 -->
           <q-card flat bordered class="certificate-card">
@@ -374,7 +374,17 @@
               <div class="text-caption">Dezembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/english_for_it_1.jfif',
+                    linkVerificacao:
+                      'https://www.credly.com/badges/653290c1-1be0-4b1d-b434-67256fa7d17d/linked_in_profile',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -394,7 +404,17 @@
               </div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/fundamentos_do_python_1.jfif',
+                    linkVerificacao:
+                      'https://www.sp.senai.br/consulta-certificado?qrcode=11324276446/14814334',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -411,7 +431,17 @@
               <div class="text-caption">Dezembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/javascript_essentials_1.jfif',
+                    linkVerificacao:
+                      'https://www.credly.com/badges/912b6c79-e360-46e5-bbe4-ea88dc389986/linked_in_profile',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -428,7 +458,17 @@
               <div class="text-caption">Dezembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/javascript_essentials_2.jfif',
+                    linkVerificacao:
+                      'https://www.credly.com/badges/16cb9599-91a5-4ffb-8ffa-2c4a0ed2d4e4/linked_in_profile',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -446,7 +486,17 @@
               <div class="text-caption q-mt-sm">Competências: Python</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/learn_python_3_course.jfif',
+                    linkVerificacao:
+                      'https://www.codecademy.com/profiles/bit0626256187/certificates/6c152bd262967f8c941c9707ed636bda',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -463,7 +513,17 @@
               <div class="text-caption">Dezembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/web_development_fundamentals.jfif',
+                    linkVerificacao:
+                      'https://www.credly.com/badges/cf001a2d-ac5d-454d-b771-e224c928e19f/linked_in_profile',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -480,7 +540,17 @@
               <div class="text-caption">Novembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/google_cloud_computing_foundations_certificate.jfif',
+                    linkVerificacao:
+                      'https://www.credly.com/badges/3f0317df-acb6-4f9c-b88d-1402876a08b7/linked_in_profile',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -494,7 +564,17 @@
               <div class="text-caption q-mt-sm">Competências: Microsoft Excel</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/excel_basico.jfif',
+                    linkVerificacao:
+                      'https://www.sp.senai.br/consulta-certificado?qrcode=00032846/4046422',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -507,7 +587,17 @@
               <div class="text-caption">Setembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/it_essentials.jfif',
+                    linkVerificacao:
+                      'https://www.credly.com/badges/25e10c9a-9ed2-4c4b-86bc-3b2b0ddbb5cb/linked_in_profile',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -524,7 +614,16 @@
               <div class="text-caption">Setembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/introduction_to_iot.jfif',
+                    linkVerificacao: '',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -541,7 +640,17 @@
               <div class="text-caption">Setembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/seguranca_do_trabalho.jfif',
+                    linkVerificacao:
+                      'https://www.sp.senai.br/consulta-certificado?qrcode=00032847/4046422',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
 
@@ -554,16 +663,51 @@
               <div class="text-caption">Setembro 2024</div>
             </q-card-section>
             <q-card-actions>
-              <q-btn flat label="Ver Certificado" />
+              <q-btn
+                flat
+                :label="$t('see_certificate')"
+                @click="
+                  showCertificate({
+                    imgPath: 'src/assets/etica_na_ia.jfif',
+                    linkVerificacao:
+                      'https://www.sp.senai.br/consulta-certificado?qrcode=00032850/4046422',
+                  })
+                "
+              />
             </q-card-actions>
           </q-card>
         </div>
       </div>
 
+      <q-dialog v-model="showModal">
+        <q-card style="width: 800px; max-width: 90vw">
+          <q-card-section class="row items-center q-pb-none">
+            <q-space />
+            <q-btn icon="close" flat round dense v-close-popup />
+          </q-card-section>
+
+          <q-card-section>
+            <q-img
+              :src="selectedCertificate.imgPath"
+              class="full-width"
+              style="max-height: 70vh; object-fit: contain"
+            />
+          </q-card-section>
+
+          <q-card-actions align="right">
+            <q-btn
+              :label="$t('verify')"
+              :href="selectedCertificate.linkVerificacao"
+              target="_blank"
+            />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
+
       <q-separator id="separador" />
 
       <div class="projetos margin q-py-xl" id="projetos">
-        <span class="text-h4 q-mb-lg">Projetos</span>
+        <span class="text-h4 q-mb-lg">{{ $t('projetos') }}</span>
         <div class="projects-grid q-mt-md">
           <q-card flat bordered class="project-card">
             <q-img src="caminho-para-imagem" />
@@ -597,6 +741,16 @@
 <script setup>
 import { useQuasar } from 'quasar'
 import { useI18n } from 'vue-i18n'
+import { ref } from 'vue'
+
+const showModal = ref(false)
+const selectedCertificate = ref('')
+
+const showCertificate = (certificate) => {
+  selectedCertificate.value = certificate
+  showModal.value = true
+}
+
 const { locale } = useI18n({ useScope: 'global' })
 
 const $q = useQuasar()
@@ -667,7 +821,24 @@ const localeOptions = [
 ]
 </script>
 
-<style scoped>
+<style>
+* {
+  object-fit: contain !important;
+}
+
+.certificate-image {
+  transition: transform 0.3s ease;
+}
+
+.certificate-image:hover {
+  transform: scale(1.03);
+}
+
+.q-dialog__inner > .q-card {
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .text-caption {
   color: rgba(255, 255, 255, 0.7);
 }

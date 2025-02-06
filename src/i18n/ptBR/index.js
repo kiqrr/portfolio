@@ -19,4 +19,6 @@ export default {
             pesquisando assuntos relacionadas a tecnologia em paralelo.`,
   certificados: 'Certificados',
   projetos: 'Projetos',
+  see_certificate: 'Ver Certificado',
+  verify: 'Verificar Autenticidade',
 }
