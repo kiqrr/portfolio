@@ -97,7 +97,7 @@
             </q-btn>
             <q-btn no-caps flat target="_blank" href="https://github.com/kiqrr">
               <q-img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                src="https://www.svgrepo.com/show/475654/github-color.svg"
                 width="24px"
                 style="margin-right: 8px"
               />
@@ -334,7 +334,7 @@
             <q-card flat bordered class="skill-card">
               <q-card-section class="flex items-center">
                 <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                  src="https://www.svgrepo.com/show/475654/github-color.svg"
                   alt="Github"
                   class="skill-icon"
                 />
@@ -363,15 +363,14 @@
         <div class="certificates-grid q-mt-md">
           <!-- Cisco - English for IT 1 -->
           <q-card flat bordered class="certificate-card">
-            <q-img
-              src="src/assets/english_for_it_1.jfif"
-              height="200px"
-              class="certificate-image"
-            />
+            <q-img src="src/assets/english_for_it_1.png" height="200px" class="certificate-image" />
             <q-card-section>
               <div class="text-h6">English for IT 1</div>
               <div class="text-subtitle2">Cisco</div>
               <div class="text-caption">Dezembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: Inglês técnico, Terminologia de TI, Comunicação técnica
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -379,7 +378,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/english_for_it_1.jfif',
+                    imgPath: 'src/assets/english_for_it_1.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/653290c1-1be0-4b1d-b434-67256fa7d17d/linked_in_profile',
                   })
@@ -421,7 +420,7 @@
           <!-- Cisco - JavaScript Essentials 1 -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/javascript_essentials_1.jfif"
+              src="src/assets/javascript_essentials_1.png"
               height="200px"
               class="certificate-image"
             />
@@ -429,6 +428,9 @@
               <div class="text-h6">JavaScript Essentials 1</div>
               <div class="text-subtitle2">Cisco</div>
               <div class="text-caption">Dezembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: JavaScript básico, Lógica de programação, Desenvolvimento web frontend
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -436,7 +438,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/javascript_essentials_1.jfif',
+                    imgPath: 'src/assets/javascript_essentials_1.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/912b6c79-e360-46e5-bbe4-ea88dc389986/linked_in_profile',
                   })
@@ -448,7 +450,7 @@
           <!-- Cisco - JavaScript Essentials 2 -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/javascript_essentials_2.jfif"
+              src="src/assets/javascript_essentials_2.png"
               height="200px"
               class="certificate-image"
             />
@@ -456,6 +458,9 @@
               <div class="text-h6">JavaScript Essentials 2</div>
               <div class="text-subtitle2">Cisco</div>
               <div class="text-caption">Dezembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: JavaScript avançado, DOM manipulation, Programação orientada a objetos
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -463,7 +468,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/javascript_essentials_2.jfif',
+                    imgPath: 'src/assets/javascript_essentials_2.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/16cb9599-91a5-4ffb-8ffa-2c4a0ed2d4e4/linked_in_profile',
                   })
@@ -511,6 +516,9 @@
               <div class="text-h6">Web Development Fundamentals</div>
               <div class="text-subtitle2">IBM</div>
               <div class="text-caption">Dezembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: HTML, CSS, JavaScript, Desenvolvimento web
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -530,7 +538,7 @@
           <!-- Google Cloud -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/google_cloud_computing_foundations_certificate.jfif"
+              src="src/assets/google_cloud_computing_foundations_certificate.png"
               height="200px"
               class="certificate-image"
             />
@@ -538,6 +546,9 @@
               <div class="text-h6">Google Cloud Computing Foundations</div>
               <div class="text-subtitle2">Google</div>
               <div class="text-caption">Novembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: Computação em nuvem, Google Cloud Platform, Infraestrutura em nuvem
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -545,7 +556,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/google_cloud_computing_foundations_certificate.jfif',
+                    imgPath: 'src/assets/google_cloud_computing_foundations_certificate.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/3f0317df-acb6-4f9c-b88d-1402876a08b7/linked_in_profile',
                   })
@@ -585,6 +596,9 @@
               <div class="text-h6">IT Essentials</div>
               <div class="text-subtitle2">Cisco</div>
               <div class="text-caption">Setembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: Hardware, Software, Redes básicas, Manutenção de computadores
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -604,7 +618,7 @@
           <!-- Cisco - IoT -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/introduction_to_iot.jfif"
+              src="src/assets/introduction_to_iot.png"
               height="200px"
               class="certificate-image"
             />
@@ -612,6 +626,9 @@
               <div class="text-h6">Introduction to IoT</div>
               <div class="text-subtitle2">Cisco</div>
               <div class="text-caption">Setembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: Internet das Coisas, Redes de sensores, Conectividade
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -619,7 +636,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/introduction_to_iot.jfif',
+                    imgPath: 'src/assets/introduction_to_iot.png',
                     linkVerificacao: '',
                   })
                 "
@@ -638,6 +655,9 @@
               <div class="text-h6">Segurança do Trabalho</div>
               <div class="text-subtitle2">SENAI Morvan Figueiredo</div>
               <div class="text-caption">Setembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: Normas de segurança, Prevenção de acidentes, Gestão de riscos
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -661,6 +681,9 @@
               <div class="text-h6">Ética na IA</div>
               <div class="text-subtitle2">SENAI Morvan Figueiredo</div>
               <div class="text-caption">Setembro 2024</div>
+              <div class="text-caption q-mt-sm">
+                Competências: Inteligência Artificial, Ética digital, Responsabilidade tecnológica
+              </div>
             </q-card-section>
             <q-card-actions>
               <q-btn
@@ -712,8 +735,8 @@
           <q-card flat bordered class="project-card">
             <q-img src="caminho-para-imagem" />
             <q-card-section>
-              <div class="text-h6">Nome do Projeto</div>
-              <p class="text-body2">Descrição do projeto</p>
+              <div class="text-h6">Em Construção</div>
+              <p class="text-body2">Em Construção</p>
             </q-card-section>
             <q-card-actions align="right">
               <q-btn flat label="Demo" />
