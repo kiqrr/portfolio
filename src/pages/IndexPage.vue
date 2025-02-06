@@ -363,7 +363,7 @@
         <div class="certificates-grid q-mt-md">
           <!-- Cisco - English for IT 1 -->
           <q-card flat bordered class="certificate-card">
-            <q-img src="src/assets/english_for_it_1.png" height="200px" class="certificate-image" />
+            <q-img src="/portfolio/assets/english_for_it_1.png" height="200px" class="certificate-image" />
             <q-card-section>
               <div class="text-h6">English for IT 1</div>
               <div class="text-subtitle2">Cisco</div>
@@ -378,7 +378,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/english_for_it_1.png',
+                    imgPath: '/portfolio/assets/english_for_it_1.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/653290c1-1be0-4b1d-b434-67256fa7d17d/linked_in_profile',
                   })
@@ -390,7 +390,7 @@
           <!-- Senai - Fundamentos do Python -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/fundamentos_do_python_1.jfif"
+              src="/portfolio/assets/fundamentos_do_python_1.jfif"
               height="200px"
               class="certificate-image"
             />
@@ -408,7 +408,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/fundamentos_do_python_1.jfif',
+                    imgPath: '/portfolio/assets/fundamentos_do_python_1.jfif',
                     linkVerificacao:
                       'https://www.sp.senai.br/consulta-certificado?qrcode=11324276446/14814334',
                   })
@@ -420,7 +420,7 @@
           <!-- Cisco - JavaScript Essentials 1 -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/javascript_essentials_1.png"
+              src="/portfolio/assets/javascript_essentials_1.png"
               height="200px"
               class="certificate-image"
             />
@@ -438,7 +438,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/javascript_essentials_1.png',
+                    imgPath: '/portfolio/assets/javascript_essentials_1.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/912b6c79-e360-46e5-bbe4-ea88dc389986/linked_in_profile',
                   })
@@ -450,7 +450,7 @@
           <!-- Cisco - JavaScript Essentials 2 -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/javascript_essentials_2.png"
+              src="/portfolio/assets/javascript_essentials_2.png"
               height="200px"
               class="certificate-image"
             />
@@ -468,7 +468,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/javascript_essentials_2.png',
+                    imgPath: '/portfolio/assets/javascript_essentials_2.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/16cb9599-91a5-4ffb-8ffa-2c4a0ed2d4e4/linked_in_profile',
                   })
@@ -480,7 +480,7 @@
           <!-- Codecademy - Learn Python 3 -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/learn_python_3_course.jfif"
+              src="/portfolio/assets/learn_python_3_course.jfif"
               height="200px"
               class="certificate-image"
             />
@@ -496,7 +496,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/learn_python_3_course.jfif',
+                    imgPath: '/portfolio/assets/learn_python_3_course.jfif',
                     linkVerificacao:
                       'https://www.codecademy.com/profiles/bit0626256187/certificates/6c152bd262967f8c941c9707ed636bda',
                   })
@@ -508,7 +508,7 @@
           <!-- IBM - Web Development -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/web_development_fundamentals.jfif"
+              src="/portfolio/assets/web_development_fundamentals.jfif"
               height="200px"
               class="certificate-image"
             />
@@ -526,7 +526,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/web_development_fundamentals.jfif',
+                    imgPath: '/portfolio/assets/web_development_fundamentals.jfif',
                     linkVerificacao:
                       'https://www.credly.com/badges/cf001a2d-ac5d-454d-b771-e224c928e19f/linked_in_profile',
                   })
@@ -538,7 +538,7 @@
           <!-- Google Cloud -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/google_cloud_computing_foundations_certificate.png"
+              src="/portfolio/assets/google_cloud_computing_foundations_certificate.png"
               height="200px"
               class="certificate-image"
             />
@@ -556,7 +556,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/google_cloud_computing_foundations_certificate.png',
+                    imgPath: '/portfolio/assets/google_cloud_computing_foundations_certificate.png',
                     linkVerificacao:
                       'https://www.credly.com/badges/3f0317df-acb6-4f9c-b88d-1402876a08b7/linked_in_profile',
                   })
@@ -567,7 +567,7 @@
 
           <!-- SENAI - Excel -->
           <q-card flat bordered class="certificate-card">
-            <q-img src="src/assets/excel_basico.jfif" height="200px" class="certificate-image" />
+            <q-img src="/portfolio/assets/excel_basico.jfif" height="200px" class="certificate-image" />
             <q-card-section>
               <div class="text-h6">Excel Básico</div>
               <div class="text-subtitle2">SENAI Morvan Figueiredo</div>
@@ -580,7 +580,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/excel_basico.jfif',
+                    imgPath: '/portfolio/assets/excel_basico.jfif',
                     linkVerificacao:
                       'https://www.sp.senai.br/consulta-certificado?qrcode=00032846/4046422',
                   })
@@ -591,7 +591,7 @@
 
           <!-- Cisco - IT Essentials -->
           <q-card flat bordered class="certificate-card">
-            <q-img src="src/assets/it_essentials.jfif" height="200px" class="certificate-image" />
+            <q-img src="/portfolio/assets/it_essentials.jfif" height="200px" class="certificate-image" />
             <q-card-section>
               <div class="text-h6">IT Essentials</div>
               <div class="text-subtitle2">Cisco</div>
@@ -606,7 +606,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/it_essentials.jfif',
+                    imgPath: '/portfolio/assets/it_essentials.jfif',
                     linkVerificacao:
                       'https://www.credly.com/badges/25e10c9a-9ed2-4c4b-86bc-3b2b0ddbb5cb/linked_in_profile',
                   })
@@ -618,7 +618,7 @@
           <!-- Cisco - IoT -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/introduction_to_iot.png"
+              src="/portfolio/assets/introduction_to_iot.png"
               height="200px"
               class="certificate-image"
             />
@@ -636,7 +636,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/introduction_to_iot.png',
+                    imgPath: '/portfolio/assets/introduction_to_iot.png',
                     linkVerificacao: '',
                   })
                 "
@@ -647,7 +647,7 @@
           <!-- SENAI - Segurança do Trabalho -->
           <q-card flat bordered class="certificate-card">
             <q-img
-              src="src/assets/seguranca_do_trabalho.jfif"
+              src="/portfolio/assets/seguranca_do_trabalho.jfif"
               height="200px"
               class="certificate-image"
             />
@@ -665,7 +665,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/seguranca_do_trabalho.jfif',
+                    imgPath: '/portfolio/assets/seguranca_do_trabalho.jfif',
                     linkVerificacao:
                       'https://www.sp.senai.br/consulta-certificado?qrcode=00032847/4046422',
                   })
@@ -676,7 +676,7 @@
 
           <!-- SENAI - Ética na IA -->
           <q-card flat bordered class="certificate-card">
-            <q-img src="src/assets/etica_na_ia.jfif" height="200px" class="certificate-image" />
+            <q-img src="/portfolio/assets/etica_na_ia.jfif" height="200px" class="certificate-image" />
             <q-card-section>
               <div class="text-h6">Ética na IA</div>
               <div class="text-subtitle2">SENAI Morvan Figueiredo</div>
@@ -691,7 +691,7 @@
                 :label="$t('see_certificate')"
                 @click="
                   showCertificate({
-                    imgPath: 'src/assets/etica_na_ia.jfif',
+                    imgPath: '/portfolio/assets/etica_na_ia.jfif',
                     linkVerificacao:
                       'https://www.sp.senai.br/consulta-certificado?qrcode=00032850/4046422',
                   })
